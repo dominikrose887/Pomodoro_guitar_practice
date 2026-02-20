@@ -26,7 +26,7 @@ def create_icon(output_path: str = "app_icon.ico") -> None:
         sizes=[(s, s) for s in sizes],
         append_images=images[:-1],
     )
-    print(f"✅ Ikon létrehozva: {os.path.abspath(output_path)}")
+    print(f"[OK] Ikon letrehozva: {os.path.abspath(output_path)}")
 
 
 def _draw_icon(size: int) -> Image.Image:

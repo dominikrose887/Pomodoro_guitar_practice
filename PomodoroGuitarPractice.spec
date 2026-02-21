@@ -2,7 +2,7 @@
 
 
 a = Analysis(
-    ['D:\\Rose\\Documents\\Projects\\Pomodoro_guitar_practice\\main.py'],
+    ['D:\\Rose\\Documents\\dev_projects\\Pomodoro_guitar_practice\\main.py'],
     pathex=[],
     binaries=[],
     datas=[],
@@ -35,5 +35,5 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    icon=['D:\\Rose\\Documents\\Projects\\Pomodoro_guitar_practice\\app_icon.ico'],
+    icon=['D:\\Rose\\Documents\\dev_projects\\Pomodoro_guitar_practice\\app_icon.ico'],
 )

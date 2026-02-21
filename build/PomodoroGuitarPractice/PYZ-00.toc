@@ -1,4 +1,4 @@
-('D:\\Rose\\Documents\\Projects\\Pomodoro_guitar_practice\\build\\PomodoroGuitarPractice\\PYZ-00.pyz',
+('D:\\Rose\\Documents\\dev_projects\\Pomodoro_guitar_practice\\build\\PomodoroGuitarPractice\\PYZ-00.pyz',
  [('__future__',
    'C:\\Users\\Dominik\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\__future__.py',
    'PYMODULE'),

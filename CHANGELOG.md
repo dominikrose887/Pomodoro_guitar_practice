@@ -1,5 +1,25 @@
 # Changelog
 
+## [1.2.0] - 2025-06-20
+
+### Added
+- **Modular source layout**: codebase refactored from a single 1 300-line `main.py` into a `source/` package (`constants`, `themes`, `sounds`, `stats_window`, `app`)
+- **Redesigned colour palettes**: warm paper-white light theme (sage green, dusty gold, muted rose) and deep-slate dark theme (warm gold, teal accents)
+- **Clean build step**: `build.py` now removes `build/`, `dist/`, `__pycache__`, and `.spec` files before every build
+- Build script bundles `res/` and `source/` via `--add-data` for correct EXE packaging
+
+### Changed
+- `main.py` is now a thin entry point (imports `source.app`)
+- Build script fully translated to English
+- All theme key names modernised (`accent`, `accent_sec`, `accent_soft`, `accent_dim` replace old names)
+- Button and card colours updated for better contrast in both themes
+- `build.py` automatically detects and bundles `res/` and `source/` directories
+
+### Fixed
+- **Window icon not showing** on taskbar and title bar – now calls `root.iconbitmap()` and `Toplevel.iconbitmap()` with `app_icon.ico`
+
+---
+
 ## [1.1.0] - 2026-02-21
 
 ### Added

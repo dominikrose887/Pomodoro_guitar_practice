@@ -20,8 +20,8 @@ If you make an error, the counter resets and you start over.
 
 The app includes two colour themes you can switch between at any time:
 
-- **Light Mode**: warm cream background, sage green accents (`#FAF9EE`, `#A2AF9B`, `#DCCFC0`, `#EEEEEE`)
-- **Dark Mode**: deep blue-grey background, gold accents (`#537188`, `#CBB279`, `#E1D4BB`, `#EEEEEE`)
+- **Light Mode**: warm paper-white background, sage green and dusty gold accents (`#f6f5f0`, `#6b9e78`, `#c8a951`)
+- **Dark Mode**: deep blue-slate background, warm gold and teal accents (`#1e272e`, `#d4b563`, `#486e84`)
 
 Toggle with the `D` key or the `🌙 Dark` / `☀ Light` button.
 
@@ -125,11 +125,20 @@ The EXE appears in the `dist/` folder with a custom icon.
 
 ```
 Pomodoro_guitar_practice/
-├── README.md          # Documentation
-├── CHANGELOG.md       # Version history
-├── main.py            # Main application (GUI + logic)
-├── create_icon.py     # Icon generator script
-└── build.py           # EXE builder script (PyInstaller)
+├── main.py                # Thin entry point
+├── source/                # Application package
+│   ├── __init__.py
+│   ├── constants.py       # Version, paths, timer & tempo constants
+│   ├── themes.py          # Light & dark colour palettes
+│   ├── sounds.py          # Beep / alert helpers (uses res/beep.wav)
+│   ├── stats_window.py    # Statistics popup window
+│   └── app.py             # Main PomodoroGuitarApp class (GUI + logic)
+├── res/
+│   └── beep.wav           # Alert sound file
+├── build.py               # EXE builder (cleans artefacts, bundles res/ & source/)
+├── create_icon.py         # Icon generator script
+├── CHANGELOG.md           # Version history
+└── README.md              # Documentation
 ```
 
 ## License
@@ -138,4 +147,4 @@ MIT
 
 ---
 
-**By DominikRose** · v1.1.0
+**By DominikRose** · v1.2.0

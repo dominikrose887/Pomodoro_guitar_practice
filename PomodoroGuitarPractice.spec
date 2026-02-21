@@ -5,7 +5,7 @@ a = Analysis(
     ['D:\\Rose\\Documents\\dev_projects\\Pomodoro_guitar_practice\\main.py'],
     pathex=[],
     binaries=[],
-    datas=[],
+    datas=[('D:\\Rose\\Documents\\dev_projects\\Pomodoro_guitar_practice\\res', 'res'), ('D:\\Rose\\Documents\\dev_projects\\Pomodoro_guitar_practice\\source', 'source')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},

@@ -4,7 +4,7 @@ Application-wide constants.
 
 import os
 
-VERSION = "1.2.0"
+VERSION = "1.2.1"
 DEVELOPER = "DominikRose"
 
 # ── Paths ───────────────────────────────────────────────────────────────────
@@ -12,7 +12,8 @@ _PKG_DIR = os.path.dirname(os.path.abspath(__file__))
 _ROOT_DIR = os.path.dirname(_PKG_DIR)
 
 BEEP_WAV = os.path.join(_ROOT_DIR, "res", "beep.wav")
-ICON_PATH = os.path.join(_ROOT_DIR, "app_icon.ico")
+ICON_PATH = os.path.join(_ROOT_DIR, "res", "app_icon.ico")
+ICON_PNG_PATH = os.path.join(_ROOT_DIR, "res", "app_icon.png")
 
 # ── Timer ───────────────────────────────────────────────────────────────────
 PRACTICE_MINUTES = 20

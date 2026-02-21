@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.2.1] - 2026-02-21
+
+### Changed
+- Window size reduced from 700×900 to 700×750 (removed excess empty space)
+- Speed Mode label simplified: removed "(Reaper)" suffix
+- Icon files (`app_icon.ico`, `app_icon.png`) moved into `res/` folder
+
+### Fixed
+- **Taskbar icon**: added `SetCurrentProcessExplicitAppUserModelID` and `iconphoto` so the custom icon reliably appears on both the title bar and the Windows taskbar
+
+---
+
 ## [1.2.0] - 2025-06-20
 
 ### Added

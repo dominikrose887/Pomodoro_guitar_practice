@@ -164,7 +164,7 @@ class UIBuilderMixin:
         self.radio_bpm.pack(side="left", padx=(0, 20))
 
         self.radio_speed = tk.Radiobutton(
-            self.mode_frame, text="▶  Speed Mode (Reaper)",
+            self.mode_frame, text="▶  Speed Mode",
             variable=self.mode_var, value=MODE_SPEED,
             font=(_FONT, 11, "bold"), bg=C["card_alt"], fg=C["accent_dim"],
             selectcolor=C["card_alt"], activebackground=C["card_alt"],

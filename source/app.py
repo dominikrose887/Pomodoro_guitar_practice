@@ -11,7 +11,7 @@ from tkinter import messagebox
 import time
 
 from source.constants import (
-    FONT_FAMILY as _FONT, ICON_PATH,
+    FONT_FAMILY as _FONT, ICON_PATH, ICON_PNG_PATH,
     PRACTICE_MINUTES, REQUIRED_CLEAN_PLAYS,
     BPM_INCREMENT, DEFAULT_BPM, MIN_BPM, MAX_BPM,
     SPEED_INCREMENT, DEFAULT_SPEED, MIN_SPEED, MAX_SPEED,
@@ -38,9 +38,25 @@ class PomodoroGuitarApp(UIBuilderMixin, ThemeMixin, TimerMixin):
         self.root.configure(bg=C["bg"])
 
         # ── Set window icon (title-bar + taskbar) ──────────────────────────
+        try:
+            import ctypes
+            ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(
+                "dominikrose.pomodoro.guitar.practice"
+            )
+        except Exception:
+            pass
+
         if os.path.isfile(ICON_PATH):
             try:
                 self.root.iconbitmap(ICON_PATH)
+            except Exception:
+                pass
+
+        if os.path.isfile(ICON_PNG_PATH):
+            try:
+                _icon_img = tk.PhotoImage(file=ICON_PNG_PATH)
+                self.root.iconphoto(True, _icon_img)
+                self._icon_img_ref = _icon_img  # prevent GC
             except Exception:
                 pass
 

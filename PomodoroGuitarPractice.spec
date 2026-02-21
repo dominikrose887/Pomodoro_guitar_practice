@@ -35,5 +35,5 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    icon=['D:\\Rose\\Documents\\dev_projects\\Pomodoro_guitar_practice\\app_icon.ico'],
+    icon=['D:\\Rose\\Documents\\dev_projects\\Pomodoro_guitar_practice\\res\\app_icon.ico'],
 )

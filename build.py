@@ -23,7 +23,7 @@ import sys
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 MAIN_PY = os.path.join(SCRIPT_DIR, "main.py")
 ICON_SCRIPT = os.path.join(SCRIPT_DIR, "create_icon.py")
-ICON_FILE = os.path.join(SCRIPT_DIR, "app_icon.ico")
+ICON_FILE = os.path.join(SCRIPT_DIR, "res", "app_icon.ico")
 RES_DIR = os.path.join(SCRIPT_DIR, "res")
 SOURCE_DIR = os.path.join(SCRIPT_DIR, "source")
 APP_NAME = "PomodoroGuitarPractice"

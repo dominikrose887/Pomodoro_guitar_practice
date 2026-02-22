@@ -3,13 +3,19 @@ Application-wide constants.
 """
 
 import os
+import sys
 
 VERSION = "1.2.1"
 DEVELOPER = "DominikRose"
 
 # ── Paths ───────────────────────────────────────────────────────────────────
-_PKG_DIR = os.path.dirname(os.path.abspath(__file__))
-_ROOT_DIR = os.path.dirname(_PKG_DIR)
+# PyInstaller --onefile extracts data to a temp dir exposed as sys._MEIPASS.
+# When running from source, fall back to the normal relative path.
+if getattr(sys, "frozen", False):
+    _ROOT_DIR = sys._MEIPASS          # type: ignore[attr-defined]
+else:
+    _PKG_DIR = os.path.dirname(os.path.abspath(__file__))
+    _ROOT_DIR = os.path.dirname(_PKG_DIR)
 
 BEEP_WAV = os.path.join(_ROOT_DIR, "res", "beep.wav")
 ICON_PATH = os.path.join(_ROOT_DIR, "res", "app_icon.ico")

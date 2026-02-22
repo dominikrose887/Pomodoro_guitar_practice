@@ -38,14 +38,6 @@ class PomodoroGuitarApp(UIBuilderMixin, ThemeMixin, TimerMixin):
         self.root.configure(bg=C["bg"])
 
         # ── Set window icon (title-bar + taskbar) ──────────────────────────
-        try:
-            import ctypes
-            ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(
-                "dominikrose.pomodoro.guitar.practice"
-            )
-        except Exception:
-            pass
-
         if os.path.isfile(ICON_PATH):
             try:
                 self.root.iconbitmap(ICON_PATH)
